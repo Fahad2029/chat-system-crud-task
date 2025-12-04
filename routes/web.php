@@ -1,6 +1,7 @@
 <?php
 
 use App\Events\ChatMessageEvent;
+use App\Http\Controllers\TaskController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -31,3 +32,12 @@ Route::post('/send-message', function () {
 
     return ['status' => 'Message sent'];
 });
+
+Route::view('/superadmin', 'superadmin');
+Route::view('/superuser', 'superuser');
+
+// Task CRUD API
+Route::get('/tasks',[TaskController::class,'index']);
+Route::post('/tasks',[TaskController::class,'store']);
+Route::put('/tasks/{task}',[TaskController::class,'update']);
+Route::delete('/tasks/{task}',[TaskController::class,'destroy']);
