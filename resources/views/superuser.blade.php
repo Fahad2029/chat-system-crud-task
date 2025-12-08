@@ -18,6 +18,11 @@
 <input type="text" id="chat_msg_user" placeholder="Message">
 <button onclick="sendMessageUser()">Send</button>
 
+<form method="POST" action="{{ route('logout') }}">
+    @csrf
+    <button type="submit">Logout</button>
+</form>
+
 
 <script>
 // Echo init

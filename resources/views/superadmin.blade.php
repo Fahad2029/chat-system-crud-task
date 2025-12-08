@@ -21,6 +21,12 @@
 <button onclick="sendMessage()">Send</button>
 <div id="chat_box"></div>
 
+<form method="POST" action="{{ route('logout') }}">
+    @csrf
+    <button type="submit">Logout</button>
+</form>
+
+
 <script>
 window.Echo = new Echo({
 broadcaster:'pusher',
