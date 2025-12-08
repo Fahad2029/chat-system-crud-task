@@ -7,6 +7,7 @@
 </head>
 <body>
 <h2>SuperAdmin Dashboard</h2>
+<p>Welcome, {{ auth()->user()->name }}</p>
 
 <h3>Add Task</h3>
 <input type="text" id="task_title" placeholder="Title">

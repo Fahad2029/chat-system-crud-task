@@ -7,6 +7,7 @@
 </head>
 <body>
 <h2>SuperUser Dashboard</h2>
+<p>Welcome, {{ auth()->user()->name }}</p>
 
 <h3>Tasks</h3>
 <ul id="task_list"></ul>
